@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import br.edu.infnet.appestabelecimento.model.domain.Estabelecimento;
-@FeignClient(url = "localhost:8081/api/estabelecimento", name = "estabelecimentoClient")
+@FeignClient(url = "localhost:8080/api/estabelecimento", name = "estabelecimentoClient")
 public interface EstabelecimentoClients {
 
 	@PostMapping(value = "/incluir")

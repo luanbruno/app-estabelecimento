@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import br.edu.infnet.appestabelecimento.model.domain.Funcionario;
-@FeignClient(url = "localhost:8081/api/funcionario", name = "funcionarioClient")
+@FeignClient(url = "localhost:8080/api/funcionario", name = "funcionarioClient")
 public interface FuncionarioClients {
 
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import br.edu.infnet.appestabelecimento.model.domain.Usuario;
 
-@FeignClient(url = "localhost:8081/api/usuario", name = "usuarioClient")
+@FeignClient(url = "localhost:8080/api/usuario", name = "usuarioClient")
 public interface UsuarioClients {
 
 
