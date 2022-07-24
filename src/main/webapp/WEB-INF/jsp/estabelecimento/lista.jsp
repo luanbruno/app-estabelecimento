@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +16,11 @@
 
 	<div class="container mt-3">
 		<h2>Lista de estabelecimento</h2>
-		
+		<security:authorize access="hasRole('ADMIN')">
 		<form action="/estabelecimento" method="get">
 				<button type="submit" class="btn btn-primary">Novo</button>
 			</form>
-		
+		</security:authorize>
 		
 		<h3>Total dos estabelecimento: ${lista.size()}</h3>
 
@@ -45,9 +46,9 @@
 						<td>${e.nome}</td>
 						<td>${e.login}</td>
 						<td>${e.senha}</td>
-					
+						<security:authorize access="hasRole('ADMIN')">
 						<td><a href="/estabelecimento/${e.id}/excluir">excluir</a></td>
-
+						</security:authorize>
 
 					</tr>
 				</c:forEach>

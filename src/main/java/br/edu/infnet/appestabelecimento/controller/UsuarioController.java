@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import br.edu.infnet.appestabelecimento.model.domain.Usuario;
 import br.edu.infnet.appestabelecimento.model.service.UsuarioService;
-
 @Controller
 public class UsuarioController {
 	
 	@Autowired
 	private UsuarioService usuarioService;
-
+	
 	@PostMapping(value = "/usuario/validar")
 	public Usuario validar(@RequestParam String login, @RequestParam String senha) {
 		return usuarioService.validar(login, senha);
@@ -36,4 +35,7 @@ public class UsuarioController {
 		
 		return "usuario/lista";
 	}
+	
+
+
 }

@@ -10,9 +10,12 @@
       
 	      <li><a href="/estabelecimentos">Estabelecimentos</a></li>
 	      <li><a href="/funcionarios">Funcionarios</a></li>
-	      <li><a href="/usuarios">Usuarios</a></li>
-	
     </ul>
+        <ul class="nav navbar-nav navbar-right">
+				<li><a href="/usuario">SignUP</a></li>
+				<li><a href="/login">Login</a></li>
+			
+		</ul>
 
   </div>
 </nav>
