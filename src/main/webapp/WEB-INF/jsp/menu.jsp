@@ -6,7 +6,7 @@
       <a class="navbar-brand" href="/">AppEstabelecimento</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/home">Home</a></li>
+      <li class="active"><a href="/">Home</a></li>
       
 	      <li><a href="/estabelecimentos">Estabelecimentos</a></li>
 	      <li><a href="/funcionarios">Funcionarios</a></li>

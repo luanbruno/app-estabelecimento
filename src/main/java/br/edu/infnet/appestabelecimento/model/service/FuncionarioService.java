@@ -13,11 +13,19 @@ public class FuncionarioService {
 	@Autowired
 	private FuncionarioClients funcionarioClients;
 
-	public List<Funcionario> obterListaId(Integer id){
-		return funcionarioClients.obterLista(id);
+	public List<Funcionario> obterListaPorid(Integer idEstabelecimento) {
+		return funcionarioClients.obterFuncionarioID(idEstabelecimento);
 	}
-	
+		
 	public void incluir(Funcionario funcionario) {
 		funcionarioClients.incluir(funcionario);
 	}
+	
+	public List<Funcionario> obterLista() {
+		return funcionarioClients.obterList();
+	}
+	public void excluir(Integer idEstabelecimento) {
+		this.funcionarioClients.excluir(idEstabelecimento);
+	}
+	
 }

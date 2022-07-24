@@ -15,6 +15,12 @@
 
 	<div class="container mt-3">
 		<h2>Lista de estabelecimento</h2>
+		
+		<form action="/estabelecimento" method="get">
+				<button type="submit" class="btn btn-primary">Novo</button>
+			</form>
+		
+		
 		<h3>Total dos estabelecimento: ${lista.size()}</h3>
 
 		<table class="table table-striped">
@@ -23,7 +29,9 @@
 					<th>cnpj</th>
 					<th>endereco</th>
 					<th>edtech</th>
-					<th>Funcionario</th>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>Login</th>
 
 					<th></th>
 				</tr>
@@ -34,7 +42,10 @@
 						<td>${e.cnpj}</td>
 						<td>${e.endereco}</td>
 						<td>${e.edTech}</td>
-						<td>${e.funcionario.size()}</td>
+						<td>${e.nome}</td>
+						<td>${e.login}</td>
+						<td>${e.senha}</td>
+					
 						<td><a href="/estabelecimento/${e.id}/excluir">excluir</a></td>
 
 

@@ -21,4 +21,10 @@ public class EstabelecimentoService {
       return estabelecimentoClients.obterLista();
   }
 	
+	public Estabelecimento obterListaId(Integer idEstabelecimento){
+	      return this.estabelecimentoClients.obterPorId(idEstabelecimento);
+	  }
+	public void excluir(Integer idEstabelecimento) {
+		this.estabelecimentoClients.excluir(idEstabelecimento);
+	}
 }

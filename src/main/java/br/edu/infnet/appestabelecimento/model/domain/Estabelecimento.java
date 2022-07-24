@@ -8,6 +8,7 @@ public class Estabelecimento extends Usuario{
 	private String cnpj;
 	private String endereco;
 	private boolean edTech;
+	
 	private List<Funcionario> funcionarios;
 
 	public String getCnpj() {

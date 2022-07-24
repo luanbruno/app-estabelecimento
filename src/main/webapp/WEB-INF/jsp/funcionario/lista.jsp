@@ -14,27 +14,40 @@
 	<c:import url="/WEB-INF/jsp/menu.jsp" />
 
 	<div class="container mt-3">
-		<h2>Lista de funcionarios</h2>
-		<h3>Total dos funcionarios: ${lista.size()}</h3>
-
+		<h2>Lista de funcionario</h2>
+		
+		<form action="/funcionario" method="get">
+				<button type="submit" class="btn btn-primary">Novo</button>
+			</form>
+		
+		
+		<h3>Total dos funcionario: ${lista.size()}</h3>
 
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>cpf</th>
-					<th>email</th>
-					<th>telefone</th>
-
+					<th>cnpj</th>
+					<th>endereco</th>
+					<th>edtech</th>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>Login</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="f" items="${lista}">
+				<c:forEach var="e" items="${lista}">
 					<tr>
-						<td>${f.id}</td>
-						<td>${f.nome}</td>
-						<td>${f.sigla}</td>
-						<td><a href="/funcionario/${f.id}/excluir">excluir</a></td>
+						<td>${e.cpf}</td>
+						<td>${e.email}</td>
+						<td>${e.telefone}</td>
+						<td>${e.nome}</td>
+						<td>${e.login}</td>
+						<td>${e.senha}</td>
+						<td></td>
+						<td><a href="/funcionario/${e.id}/excluir">excluir</a></td>
+
+
 					</tr>
 				</c:forEach>
 			</tbody>

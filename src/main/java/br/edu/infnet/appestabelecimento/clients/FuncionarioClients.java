@@ -3,6 +3,7 @@ package br.edu.infnet.appestabelecimento.clients;
 import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,14 @@ public interface FuncionarioClients {
 	@PostMapping(value = "/incluir")
 	public void incluir(@RequestBody Funcionario funcionario);
 	
-	@GetMapping(value = "/{id}/listar")
-	public List<Funcionario> obterLista(@PathVariable Integer id);
 	
+	@GetMapping(value = "/{id}/listar")
+	public List<Funcionario> obterFuncionarioID(@PathVariable Integer id);
+	
+	@GetMapping(value = "/listar")
+	public List<Funcionario> obterList();
+	
+	@DeleteMapping("/{id}/excluir")
+	public void excluir(@PathVariable Integer id);
+
 }
